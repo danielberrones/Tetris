@@ -1,9 +1,9 @@
-.misc{
+/* .misc{
     color: #375E97;
     color: #FB6542;
     color: #FFBB00;
     color: #3F681C;
-}
+} */
 
 
 body{
@@ -14,10 +14,15 @@ body{
     height: 400px;
     width: 200px;
     background: #3F681C;
+    display:flex;
+    flex-wrap: wrap;
 }
 
 .grid div{
     height: 20px;
     width: 20px;
-    background: #FFBB00;
+}
+
+.tetris-block{
+    background: #FB6542;
 }
