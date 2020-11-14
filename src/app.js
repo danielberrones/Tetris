@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const allTetrisBlocks = [LBlock, ZBlock, TBlock, OBlock, IBlock];
 
     let currentPosition = 4;
+    let currentRotation = 0;
     // let currentBlock = allTetrisBlocks[0][0];
     // let currentBlock = allTetrisBlocks[0][0];
     // let currentBlock = allTetrisBlocks[0][0];
@@ -51,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // random tetris block
     let randomBlock = Math.floor(Math.random() * allTetrisBlocks.length);
-    let currentBlock = allTetrisBlocks[randomBlock][0];
+    let currentBlock = allTetrisBlocks[randomBlock][currentRotation];
 
     function draw() {
         currentBlock.forEach(index => {
@@ -59,7 +60,21 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
-    draw();
+    function undraw() {
+        currentBlock.forEach(index => {
+            squares[currentPosition + index].classList.remove("tetris-block");
+        })
+    }
+
+
+    timerID = setInterval(moveDown,1000);
+
+    function moveDown() {
+        undraw();
+        currentPosition += width;
+        draw();
+    }
+
 })
 
 
