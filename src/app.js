@@ -1,11 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // querySelectors
     const grid = document.querySelector(".grid");
-    let squares = Array.from(document.querySelectorAll(".grid div"));
     const score = document.querySelector("#score");
     const startBtn = document.querySelector("#start-btn");
+
+    // store array values
+    let squares = Array.from(document.querySelectorAll(".grid div"));
+    
+    // set initial width
     const width = 10;
 
-    // Tetris Blocks
+    // tetrisBlocks
     const LBlock = [
         [1, width + 1, width * 2 + 1, 2],
         [width, width + 1, width + 2, width * 2 + 2],
@@ -50,13 +55,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let randomBlock = Math.floor(Math.random() * allTetrisBlocks.length);
     let currentBlock = allTetrisBlocks[randomBlock][currentRotation];
 
-
+    // draw block
     function draw() {
         currentBlock.forEach(index => {
             squares[currentPosition + index].classList.add("tetris-block");
         })
     }
 
+    // undraw block
     function undraw() {
         currentBlock.forEach(index => {
             squares[currentPosition + index].classList.remove("tetris-block");
@@ -66,15 +72,19 @@ document.addEventListener("DOMContentLoaded", () => {
     // move the block down every 1 second
     timerID = setInterval(moveDown,500);
 
+    // move block down
     function moveDown() {
         undraw();
         currentPosition += width;
         draw();
     }
 
-    // function freeze() {
-    //     if (currentBlock.some(index => squares[].classList.contains("taken"));
-    // }
+    // freezes block
+    function freeze() {
+        if (currentBlock.some(index => squares[currentPosition + index + width].classList.contains("filled"))) {
+            currentBlock.forEach(index => squares[currentPosition + index].classList.add("filled"));
+        }
+    }
 
 
 })
