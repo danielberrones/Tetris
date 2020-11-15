@@ -45,14 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let currentPosition = 4;
     let currentRotation = 0;
-    // let currentBlock = allTetrisBlocks[0][0];
-    // let currentBlock = allTetrisBlocks[0][0];
-    // let currentBlock = allTetrisBlocks[0][0];
-    // let currentBlock = allTetrisBlocks[1][0];
 
     // random tetris block
     let randomBlock = Math.floor(Math.random() * allTetrisBlocks.length);
     let currentBlock = allTetrisBlocks[randomBlock][currentRotation];
+
 
     function draw() {
         currentBlock.forEach(index => {
@@ -66,14 +63,19 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
-
-    timerID = setInterval(moveDown,1000);
+    // move the block down every 1 second
+    timerID = setInterval(moveDown,500);
 
     function moveDown() {
         undraw();
         currentPosition += width;
         draw();
     }
+
+    // function freeze() {
+    //     if (currentBlock.some(index => squares[].classList.contains("taken"));
+    // }
+
 
 })
 
