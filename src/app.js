@@ -77,12 +77,18 @@ document.addEventListener("DOMContentLoaded", () => {
         undraw();
         currentPosition += width;
         draw();
+        freeze();
     }
 
     // freezes block
     function freeze() {
         if (currentBlock.some(index => squares[currentPosition + index + width].classList.contains("filled"))) {
             currentBlock.forEach(index => squares[currentPosition + index].classList.add("filled"));
+            // start new block
+            let currentPosition = 4;
+            let randomBlock = Math.floor(Math.random() * allTetrisBlocks.length);
+            let currentBlock = allTetrisBlocks[randomBlock][currentRotation];
+            draw();
         }
     }
 
