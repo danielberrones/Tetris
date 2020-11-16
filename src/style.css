@@ -15,7 +15,6 @@ h1 {
     font-family: 'Boogaloo', cursive;
     text-transform: uppercase;
     letter-spacing: 4px;
-    /* padding: 10px; */
 }
 
 h3 {
@@ -24,12 +23,15 @@ h3 {
     font-family: 'Goldman', cursive;
 }
 
+.wrapper{
+    display: flex;
+}
 .grid {
+    display: flex;
+    flex-wrap: wrap;
     height: 400px;
     width: 200px;
     background: #a7038b;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .grid div {

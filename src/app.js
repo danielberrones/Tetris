@@ -6,9 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // store array values
     let squares = Array.from(document.querySelectorAll(".grid div"));
-    
+    let timerID;
+
     // set initial width
     const width = 10;
+
+    // colors
+    const colors = ["#FB6542","#FFBB00","#3F681C","#375E97"]
 
     // tetrisBlocks
     const LBlock = [
@@ -19,31 +23,31 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     const ZBlock = [
-        [0, width, width + 1, width * 2 + 1],
-        [width + 1, width + 2, width * 2, width * 2 + 1],
-        [0, width, width + 1, width * 2 + 1],
-        [width + 1, width + 2, width * 2, width * 2 + 1]
-    ]
+        [0,width,width+1,width*2+1],
+        [width+1, width+2,width*2,width*2+1],
+        [0,width,width+1,width*2+1],
+        [width+1, width+2,width*2,width*2+1]
+    ];
 
     const TBlock = [
-        [1, width, width + 1, width + 2],
-        [1, width + 1, width + 2, width * 2 + 1],
-        [width, width + 1, width + 2, width * 2 + 1],
-        [1, width, width + 1, width * 2 + 1]
-    ]
+        [1,width,width+1,width+2],
+        [1,width+1,width+2,width*2+1],
+        [width,width+1,width+2,width*2+1],
+        [1,width,width+1,width*2+1]
+    ];
 
     const OBlock = [
-        [0, 1, width, width + 1],
-        [0, 1, width, width + 1],
-        [0, 1, width, width + 1],
-        [0, 1, width, width + 1]
+        [0,1,width,width+1],
+        [0,1,width,width+1],
+        [0,1,width,width+1],
+        [0,1,width,width+1]
     ];
 
     const IBlock = [
-        [1, width + 1, width * 2 + 1, width * 3 + 1],
-        [width, width + 1, width + 2, width + 3],
-        [1, width + 1, width * 2 + 1, width * 3 + 1],
-        [width, width + 1, width + 2, width + 3]
+        [1,width+1,width*2+1,width*3+1],
+        [width,width+1,width+2,width+3],
+        [1,width+1,width*2+1,width*3+1],
+        [width,width+1,width+2,width+3]
     ];
 
     const allTetrisBlocks = [LBlock, ZBlock, TBlock, OBlock, IBlock];
@@ -59,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function draw() {
         currentBlock.forEach(index => {
             squares[currentPosition + index].classList.add("tetris-block");
+            squares[currentPosition + index].style.backgroundColor = colors[randomBlock];
         })
     }
 
@@ -66,11 +71,12 @@ document.addEventListener("DOMContentLoaded", () => {
     function undraw() {
         currentBlock.forEach(index => {
             squares[currentPosition + index].classList.remove("tetris-block");
+            squares[currentPosition + index].style.backgroundColor = "";
         })
     }
 
-    // move the block down every 1 second
-    timerID = setInterval(moveDown,500);
+    // timer to move block down every .5 second
+    timerID = setInterval(moveDown, 500);
 
     // move block down
     function moveDown() {
@@ -80,39 +86,4 @@ document.addEventListener("DOMContentLoaded", () => {
         // freeze();
     }
 
-    // freezes block
-    // function freeze() {
-    //     if (currentBlock.some(index => squares[currentPosition + index + width].classList.contains("filled"))) {
-    //         currentBlock.forEach(index => squares[currentPosition + index].classList.add("filled"));
-    //         // start new block
-    //         let currentPosition = 4;
-    //         let randomBlock = Math.floor(Math.random() * allTetrisBlocks.length);
-    //         let currentBlock = allTetrisBlocks[randomBlock][currentRotation];
-    //         draw();
-    //     }
-    // }
-
-
 })
-
-
-
-
-
-
-
-
-
-
-// // Tetris Blocks
-// const LBlock = [
-//     ["one"],
-//     ["two"],
-//     ["three"],
-//     ["four"]
-// ]
-
-
-// // Array.prototype.forEach()
-// LBlock.forEach(x=>console.log(x));
-
