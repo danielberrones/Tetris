@@ -23,9 +23,10 @@ h3 {
     font-family: 'Goldman', cursive;
 }
 
-.wrapper{
+.wrapper {
     display: flex;
 }
+
 .grid {
     display: flex;
     flex-wrap: wrap;

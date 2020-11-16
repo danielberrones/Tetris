@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const width = 10;
 
     // colors
-    const colors = ["#FB6542","#FFBB00","#3F681C","#375E97"]
+    const colors = ["#FB6542", "#FFBB00", "#3F681C", "#375E97"]
 
     // tetrisBlocks
     const LBlock = [
@@ -23,31 +23,31 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     const ZBlock = [
-        [0,width,width+1,width*2+1],
-        [width+1, width+2,width*2,width*2+1],
-        [0,width,width+1,width*2+1],
-        [width+1, width+2,width*2,width*2+1]
+        [0, width, width + 1, width * 2 + 1],
+        [width + 1, width + 2, width * 2, width * 2 + 1],
+        [0, width, width + 1, width * 2 + 1],
+        [width + 1, width + 2, width * 2, width * 2 + 1]
     ];
 
     const TBlock = [
-        [1,width,width+1,width+2],
-        [1,width+1,width+2,width*2+1],
-        [width,width+1,width+2,width*2+1],
-        [1,width,width+1,width*2+1]
+        [1, width, width + 1, width + 2],
+        [1, width + 1, width + 2, width * 2 + 1],
+        [width, width + 1, width + 2, width * 2 + 1],
+        [1, width, width + 1, width * 2 + 1]
     ];
 
     const OBlock = [
-        [0,1,width,width+1],
-        [0,1,width,width+1],
-        [0,1,width,width+1],
-        [0,1,width,width+1]
+        [0, 1, width, width + 1],
+        [0, 1, width, width + 1],
+        [0, 1, width, width + 1],
+        [0, 1, width, width + 1]
     ];
 
     const IBlock = [
-        [1,width+1,width*2+1,width*3+1],
-        [width,width+1,width+2,width+3],
-        [1,width+1,width*2+1,width*3+1],
-        [width,width+1,width+2,width+3]
+        [1, width + 1, width * 2 + 1, width * 3 + 1],
+        [width, width + 1, width + 2, width + 3],
+        [1, width + 1, width * 2 + 1, width * 3 + 1],
+        [width, width + 1, width + 2, width + 3]
     ];
 
     const allTetrisBlocks = [LBlock, ZBlock, TBlock, OBlock, IBlock];
