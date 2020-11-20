@@ -1,9 +1,28 @@
-body{
+body {
     background: navy;
 }
 
-h1{
+h1 {
     font-size: 4rem;
     color: white;
-    
+    text-align: center;
+}
+
+#main-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#tetris-grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+    width: 200px;
+    background: red;
+}
+
+.cells {
+    background: khaki;
+    height: 20px;
+    width: 20px;
 }
