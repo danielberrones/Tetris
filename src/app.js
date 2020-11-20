@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const grid = document.querySelector(".grid");
     let squares = Array.from(document.querySelectorAll(".grid div"));
     const score = document.querySelector("#score");
-    const startBtn = document.querySelector("#start-btn");
+    const startButton = document.querySelector("#start-btn");
 
     // store array values
     let timerID;
@@ -57,45 +57,45 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentPosition = 4;
     let currentRotation = 0;
 
-    // random tetris block
-    let randomBlock = Math.floor(Math.random() * allTetrisBlocks.length);
-    let currentBlock = allTetrisBlocks[randomBlock][currentRotation];
+    // // random tetris block
+    // let randomBlock = Math.floor(Math.random() * allTetrisBlocks.length);
+    // let currentBlock = allTetrisBlocks[randomBlock][currentRotation];
 
-    // draw block
-    function draw() {
-        currentBlock.forEach(index => {
-            squares[currentPosition + index].classList.add("tetris-block");
-            squares[currentPosition + index].style.backgroundColor = colors[randomBlock];
-        })
-    }
+    // // draw block
+    // function draw() {
+    //     currentBlock.forEach(index => {
+    //         squares[currentPosition + index].classList.add("tetris-block");
+    //         squares[currentPosition + index].style.backgroundColor = colors[randomBlock];
+    //     })
+    // }
 
-    // undraw block
-    function undraw() {
-        currentBlock.forEach(index => {
-            squares[currentPosition + index].classList.remove("tetris-block");
-            squares[currentPosition + index].style.backgroundColor = "";
-        })
-    }
+    // // undraw block
+    // function undraw() {
+    //     currentBlock.forEach(index => {
+    //         squares[currentPosition + index].classList.remove("tetris-block");
+    //         squares[currentPosition + index].style.backgroundColor = "";
+    //     })
+    // }
 
-    // timer to move block down every .5 second
-    timerID = setInterval(moveDown, 500);
+    // // timer to move block down every .5 second
+    // timerID = setInterval(moveDown, 500);
 
-    // move block down
-    function moveDown() {
-        undraw();
-        currentPosition += width;
-        draw();
-        freeze();
-    }
+    // // move block down
+    // function moveDown() {
+    //     undraw();
+    //     currentPosition += width;
+    //     draw();
+    //     freeze();
+    // }
 
-    function freeze() {
-        if (currentBlock.some(index => squares[currentPosition + index + width].classList.contains("filled"))) {
-            currentBlock.forEach(index => squares[currentPosition + index ].classList.add("filled"));
-            let randomBlock = Math.floor(Math.random() * allTetrisBlocks.length);
-            let currentBlock = allTetrisBlocks[randomBlock][currentRotation];
-            let currentPosition = 4;
-            draw();
-        }
-    }
+    // function freeze() {
+    //     if (currentBlock.some(index => squares[currentPosition + index + width].classList.contains("filled"))) {
+    //         currentBlock.forEach(index => squares[currentPosition + index ].classList.add("filled"));
+    //         let randomBlock = Math.floor(Math.random() * allTetrisBlocks.length);
+    //         let currentBlock = allTetrisBlocks[randomBlock][currentRotation];
+    //         let currentPosition = 4;
+    //         draw();
+    //     }
+    // }
 
 })
