@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let tetrisCellsArray = Array.from(document.querySelectorAll("tetris-cells"));
     const width = 10;
 
-    let timerID;
+    let timerId;
 
 
 
