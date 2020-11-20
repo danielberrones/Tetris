@@ -6,19 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
     let timerID;
 
 
-    
-    
 
-    
+
+    const hiJS = () => console.log("Hi JavaScript");
+
+    hiJS();
+
+
+
 })
-
-
-
-
-
-
-
-
-// const hiJS = () => console.log("Hi JavaScript");
-
-// hiJS();
