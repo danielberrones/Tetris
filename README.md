@@ -1,4 +1,4 @@
 # Tetris
-Tetris written in JavaScript
+Tetris written in vanilla JavaScript
 
 ![Tetris](/img/tetris.png)
