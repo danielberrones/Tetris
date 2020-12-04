@@ -1,8 +1,16 @@
 .grid {
+    display: flex;
+    flex-wrap: wrap;
     /* margin: 10px auto; */
-    background: teal;
+    background: navy;
+    /* background: teal; */
     height: 400px;
     width: 200px;
 }
 
-.grid div {}
+.grid div {
+    height: 20px;
+    width: 20px;
+    background: teal;
+    /* background: navy; */
+}
