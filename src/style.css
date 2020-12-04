@@ -1,16 +1,36 @@
+ner {
+  display: flex;
+}
+
+
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    /* margin: 10px auto; */
-    background: navy;
-    /* background: teal; */
-    height: 400px;
-    width: 200px;
+  width: 200px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: purple;
 }
 
 .grid div {
-    height: 20px;
-    width: 20px;
-    background: teal;
-    /* background: navy; */
+  height: 20px;
+  width: 20px;
+}
+
+.tetromino {
+  background-color: blue;
+}
+
+
+.mini-grid {
+  margin-left: 50px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: gold;
+}
+
+.mini-grid div {
+  height: 20px;
+  width: 20px;
 }
