@@ -1,67 +1,8 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
-body {
-    background: navy;
-}
-
-h1 {
-    margin-top: 50px;
-    /* font-family: 'Rubik', sans-serif; */
-    font-family: 'Bangers', cursive;
-    /* font-family: Arial, Helvetica, sans-serif; */
-    font-size: 6.5rem;
-    font-weight: 400;
-    color: white;
-    text-align: center;
-}
-
-h2 {
-    /* font-family: 'Rubik', sans-serif; */
-    font-family: 'Bangers', cursive;
-    /* font-family: Arial, Helvetica, sans-serif; */
-    font-size: 3.5rem;
-    font-weight: 200;
-    color: white;
-    text-align: center;
-}
-
-#main-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#tetris-grid {
-    display: flex;
-    flex-wrap: wrap;
-    /* justify-content: center; */
-    margin: 10px auto;
+.grid {
+    /* margin: 10px auto; */
+    background: teal;
     height: 400px;
     width: 200px;
-    background: red;
-    border: 1px solid cyan;
 }
 
-.cells {
-    background: khaki;
-    height: 20px;
-    width: 20px;
-}
-
-#start-button {
-    background: orangered;
-    color: white;
-    font-size: 1.3rem;
-    padding: 10px;
-    margin: 30px auto;
-    border: 1px solid cyan;
-    /* width: 100px; */
-}
-
-#score {
-    font-family: 'Rubik', sans-serif;
-    font-size: 3rem;
-}
+.grid div {}
