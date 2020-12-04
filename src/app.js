@@ -5,13 +5,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let timerId;
 
-
+    timerId = setInterval(500);
 
 
     const hiJS = () => console.log("Hi JavaScript");
 
     hiJS();
 
+
+    // function control(e)
+
+    // function draw()
+
+    // function undraw()
+
+    // function moveDown()
+
+    // function moveRight()
+
+    // function moveLeft()
+
+    // function freeze()
+
+    // function rotate()
+
+    // function gameOver()
+
+    // function displayShape()
+
+    // function addScore()
 
 
 })
